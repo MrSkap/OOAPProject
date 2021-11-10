@@ -24,10 +24,6 @@ namespace OOAPProject
 
 		}
 
-		void clearList()
-		{
-			students.Clear();
-		}
 
 
 	}
