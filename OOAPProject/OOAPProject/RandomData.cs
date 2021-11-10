@@ -12,9 +12,10 @@ namespace OOAPProject
 		public static string CreateString(int length)
 		{
 			StringBuilder sb = new StringBuilder();
+			
 			for(int i = 0; i < length; i++)
 			{
-				sb[i] = System.Convert.ToChar(new Random().Next(firstSmallLeter, lastSmallLeter));
+				sb.Append(System.Convert.ToChar(new Random().Next(firstSmallLeter, lastSmallLeter)));
 			}
 			return sb.ToString();
 		}
@@ -39,8 +40,13 @@ namespace OOAPProject
 
 		public static int CreateGrade()
 		{
-			return new Random().Next(1, 5);
+			return new Random().Next(0, 6);
 		}
 
+
+		public static int CreateSalary(int min, int max)
+		{
+			return new Random().Next(min, max);
+		}
 	}
 }

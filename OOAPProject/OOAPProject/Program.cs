@@ -1,15 +1,34 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace OOAPProject
 {
 	class Program
 	{
+		static List<Student> students = new List<Student>();
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
-			int a;
-			a = Console.Read();
-			Console.WriteLine(a);
+			
+			AddNewItemsInList(10);
+			List<Student> studentsSortByAge = new Sorter().SortByAge(students);
+
+			for (int i = 0; i < studentsSortByAge.Count; i++)
+				Console.WriteLine(studentsSortByAge[i].age.ToString());
 		}
+
+		static void AddNewItemsInList(int count)
+		{
+			for(int i = 0; i < count; i++)
+				students.Add(new Student());
+
+		}
+
+		void clearList()
+		{
+			students.Clear();
+		}
+
+
 	}
 }

@@ -4,11 +4,13 @@ using System.Text;
 
 namespace OOAPProject
 {
-	public class Human
+	public abstract class Human
 	{
 		public int age = 0;
 		public string name = "user";
 		public string secondName = "MrUser";
-		
+
+
+		public abstract Human CreateNewRandomHuman();
 	}
 }
